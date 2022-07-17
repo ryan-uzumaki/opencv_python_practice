@@ -1,6 +1,6 @@
 import cv2 as cv
 
-capture = cv.VideoCapture(2)
+capture = cv.VideoCapture(0)
 capture.set(cv.CAP_PROP_FRAME_WIDTH, 640)
 capture.set(cv.CAP_PROP_FRAME_HEIGHT, 480)
 cv.namedWindow("frame", cv.WINDOW_AUTOSIZE)
