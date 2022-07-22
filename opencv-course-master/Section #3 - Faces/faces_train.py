@@ -5,7 +5,7 @@ import cv2 as cv
 import numpy as np
 
 people = ['Ben Afflek', 'Elton John', 'Jerry Seinfield', 'Madonna', 'Mindy Kaling']
-DIR = '../Resources/Faces/train'
+DIR = r"..\Resources\Faces\train"
 
 haar_cascade = cv.CascadeClassifier('haar_face.xml')
 
@@ -32,7 +32,6 @@ def create_train():
                 faces_roi = gray[y:y+h, x:x+w]
                 features.append(faces_roi)
                 labels.append(label)
-
 
 create_train()
 print('Training done ---------------')
