@@ -18,7 +18,7 @@ def create_train():
         label = people.index(person)
 
         for img in os.listdir(path):
-            img_path = os.path.join(path,img)
+            img_path = os.path.join(path, img)
 
             img_array = cv.imread(img_path)
             if img_array is None:
@@ -42,7 +42,7 @@ labels = np.array(labels)
 face_recognizer = cv.face.LBPHFaceRecognizer_create()
 
 # Train the Recognizer on the features list and the labels list
-face_recognizer.train(features,labels)
+face_recognizer.train(features, labels)
 
 face_recognizer.save('face_trained.yml')
 np.save('features.npy', features)
