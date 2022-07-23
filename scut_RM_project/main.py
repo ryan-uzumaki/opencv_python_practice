@@ -6,6 +6,7 @@ capture = cv.VideoCapture("example.avi")
 cv.namedWindow("video", cv.WINDOW_AUTOSIZE)
 
 
+
 def adjust_gamma(image, gamma=1.0):
     invgamma = 1 / gamma
     brighter_image = np.array(np.power((image / 255), invgamma) * 255, dtype=np.uint8)
