@@ -1,4 +1,6 @@
 import cv2 as cv
+import numpy as np
+
 
 image = cv.imread("test.png")
 
@@ -9,13 +11,19 @@ cv.imshow("img", img)
 # cv.imshow('Blur', blur)
 B, G, R = cv.split(img)
 
-cv.imshow("split channelB", B)
-cv.imshow("split channelG", G)
-cv.imshow("split channelR", R)
+img_hsv = cv.cvtColor(img, cv.COLOR_BGR2HSV)
+cv.imshow("img_hsv", img_hsv)
+print(img_hsv.dtype)
+print(img_hsv[2])
+# cv.imshow("img_hsv[2]", img_hsv[2])
+
+# cv.imshow("split channelB", B)
+# cv.imshow("split channelG", G)
+# cv.imshow("split channelR", R)
 
 
-bmg = B-G
-cv.imshow("bmgmr", bmg)
+# bmg = B-G
+# cv.imshow("bmgmr", bmg)
 # bmg = B - G
 # gmb = G - B
 # cv.imshow("bmg", bmg)

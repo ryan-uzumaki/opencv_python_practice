@@ -2,9 +2,9 @@ import cv2 as cv
 import matplotlib.pyplot as plt
 import numpy as np
 
+
 capture = cv.VideoCapture("example.avi")
 cv.namedWindow("video", cv.WINDOW_AUTOSIZE)
-
 
 
 def adjust_gamma(image, gamma=1.0):
